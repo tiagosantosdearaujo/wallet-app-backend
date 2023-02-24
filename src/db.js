@@ -7,6 +7,9 @@ const db = new Pool(
   DB_URL
     ? {
         connectionString: DB_URL,
+        ssl: {
+          rejectUnauthorized: false,
+        },
       }
     : {
         user: DB_USER,
